@@ -1,87 +1,110 @@
-body
-{
-    background-color: #00539C;
+* {
+  box-sizing: border-box;
 }
 
-.title{
-    font-size: 30px;
-    color: antiquewhite;
-
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
-.app{
-    margin: 3px;
-    padding: 3px;
-    text-align: center;
+body {
+  background-color: #00539c;
 }
 
-.form{
-    display: grid;
+.title {
+  font-size: 30px;
+  color: antiquewhite;
 }
 
-.input{
-    border: 1px solid black;
-    border-radius: 30px;
-    padding: 10px;
-    margin: 5px;
-    background-color: rgba( 0, 0, 0, 0.3);
-    color: white;
+.app {
+  margin: 3px;
+  padding: 3px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
 }
 
-.button{
-    border: 1px solid black;
-    border-radius: 15px;
-    margin: 5px;
-    padding: 15px;
-    background-color: antiquewhite;
+.form {
+  display: grid;
+}
+
+.input {
+  border: 1px solid black;
+  border-radius: 30px;
+  padding: 10px;
+  margin: 5px;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: white;
+}
+
+.button {
+  border: 1px solid black;
+  border-radius: 15px;
+  margin: 5px;
+  padding: 15px;
+  background-color: antiquewhite;
 }
 /* Button animaiton */
-button:hover{cursor: pointer}
+button:hover {
+  cursor: pointer;
+}
 button {
-  background: transparent; outline: none;
+  background: transparent;
+  outline: none;
   position: relative;
   border: 2px solid #111;
   padding: 15px 50px;
   overflow: hidden;
 }
 /*button:before (attr data-hover)*/
-button:hover:before{opacity: 1; transform: translate(0,0);}
-button:before{
+button:hover:before {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+button:before {
   content: attr(data-hover);
   position: absolute;
-  top: 1.1em; left: 0;
+  top: 1.1em;
+  left: 0;
   width: 100%;
   text-transform: uppercase;
   letter-spacing: 3px;
   font-weight: 800;
-  font-size: .8em;
+  font-size: 0.8em;
   opacity: 0;
-  transform: translate(-100%,0);
-  transition: all .3s ease-in-out;
+  transform: translate(-100%, 0);
+  transition: all 0.3s ease-in-out;
 }
 /*button div (button text before hover)*/
-button:hover div{opacity: 0; transform: translate(100%,0)}
-button div{
+button:hover div {
+  opacity: 0;
+  transform: translate(100%, 0);
+}
+button div {
   text-transform: uppercase;
   letter-spacing: 3px;
   font-weight: 800;
-  font-size: .8em;
-  transition: all .3s ease-in-out;
+  font-size: 0.8em;
+  transition: all 0.3s ease-in-out;
 }
 
-.card-list{
-    columns: 3;
+.card-list {
+  columns: 3;
 }
 
-.card{
-    display: flex;
-    margin-bottom: 1rem;
+.card {
+  display: flex;
+  margin-bottom: 1rem;
 }
 
-.card-image{
-    flex: 100%;
-    margin-top: 1rem;
-    border-radius: 15px;
+.card-image {
+  flex: 100%;
+  margin-top: 1rem;
+  border-radius: 15px;
 }
 
 /* Media queries for responsiveness */
@@ -89,6 +112,9 @@ button div{
 @media screen and (max-width: 600px) {
   .card {
     flex: 0 0 calc(50% - 1rem); /* Show two cards per row with some spacing */
+  }
+  .card-list {
+    columns: 2;
   }
 }
 

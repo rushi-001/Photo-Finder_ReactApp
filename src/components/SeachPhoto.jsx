@@ -19,7 +19,6 @@ export default function SeachPhoto() {
       });
 
       const results = response.response.results;
-      // console.log(results);
       setPic(results);
     } catch (error) {
       console.error("Failed to fetch images:", error);
@@ -29,7 +28,6 @@ export default function SeachPhoto() {
   return (
     <div>
       <form className="form" onSubmit={searchP}>
-        <a></a>
         <input
           type="text"
           name="query"
@@ -51,7 +49,7 @@ export default function SeachPhoto() {
               height="50%"
               width="50%"
             ></img>
-          </div>
+          </div> 
         ))}
       </div>
     </div>

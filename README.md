@@ -25,7 +25,7 @@
 
 ## Demo
 
-> Check out the live demo: [Photo-Finder React App Demo](https://photo-finder-by-rushi.onrender.com/)
+> Check out the live demo: [Photo-Finder React App Demo](https://photo-finder-by-rushi.netlify.app/)
 
 ## Technologies Used
 
